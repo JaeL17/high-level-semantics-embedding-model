@@ -53,6 +53,11 @@ Despite its significantly smaller parameter size, the high-level semantic model 
 
 ## Attention Visualisation
 
+**Base model**
+   
+![base_head_view](https://github.com/JaeL17/high-level-semantics-embedding-model/assets/73643391/143ac834-ad9a-43d7-b0c2-d3bd15446279)
 
-
+**High-level smenatic model**
+   
+![high_level_semantics](https://github.com/JaeL17/high-level-semantics-embedding-model/assets/73643391/5e2cb81c-cbf0-4cc6-94db-fb82562964e7)
 
