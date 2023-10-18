@@ -51,5 +51,8 @@ Despite its significantly smaller parameter size, the high-level semantic model 
 |[e5-Large-v2](https://huggingface.co/embaas/sentence-transformers-e5-large-v2)|0.888|0.940|0.956|
 |[ember-v1](https://huggingface.co/llmrails/ember-v1)|0.902|0.945|**0.963**|
 
+## Attention Visualisation
+
+
 
 
