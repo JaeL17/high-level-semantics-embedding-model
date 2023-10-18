@@ -37,6 +37,7 @@ CUDA_VISIBLE_DEVICES=0,1,2 nohup python -u train_multi_gpus.py \
    --triplet_margin 0.5 \
    --train_batch_size 128 \
    --output_model_name trained_model >> logs/train_multi_gpus_log.txt &
+
 tail -f logs/train_multi_gpus_log.txt
 ```
 
@@ -45,6 +46,7 @@ tail -f logs/train_multi_gpus_log.txt
 nohup python -u test.py \
    --test_model_path "trained_model" \
    --annoy_tree_num 20 >> logs/test_log.txt &
+
 tail -f logs/test_log.txt
 ```
 ## Test Results and Performance Comparison
