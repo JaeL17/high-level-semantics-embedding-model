@@ -1,13 +1,13 @@
 # Overview
-Welcome to the repository for our high-level semantic embedding model designed for intent classification, a crucial task in the field of Natural Language Processing (NLP). In this project, I have developed a high-level semantic embedding model, focusing on achieving a deeper understanding of sentence intentions.
+Welcome to the repository for a high-level semantic embedding model designed for intent classification, a crucial task in the field of Natural Language Processing (NLP). In this project, I present a novel high-level semantic embedding model, with a primary focus on enhancing the understanding of the intention within sentences.
 
 ## Motivation
-Intent classification is a task that requires a broader understanding of the underlying meaning in a sentence. However, conventional embedding models tend to  focus on specific details within a sentence, such as certain keywords. To address this limitation, I implemented a data augmentation method to construct a triplet training dataset using the entity attributes and entity relations information extracted from FewRel relation classification dataset. You can access the FewRel dataset here: https://paperswithcode.com/dataset/fewrel
+In intent classification, it is essential to grasp a broader understanding of the underlying meaning in a sentence. However, conventional embedding models tend to focus on specific details within a sentence, such as certain keywords. To address this limitation, I implemented a data augmentation method to construct a triplet training dataset using the entity attributes and entity relations information extracted from FewRel relation classification dataset. You can access the FewRel dataset here: [FewRel dataset](https://paperswithcode.com/dataset/fewrel)
 
 ## Contents
-1. **Data Parsing**: Code for constructing the training dataset.
-2. **Training**: Code for fine-tuning open-source sentence embedding models on the training dataset.
-3. **Testing**: Code for computing the top-3 accuracy of **MTEB/mtop_intent** dataset using a retrieval task approach based on Annoy index. The trainset of MTEB/mtop_intent is indexed, and the testset is used as a search query.
+1. **Data Parsing**: Code for constructing the triplet training dataset.
+2. **Training**: Code for fine-tuning open-source sentence embedding models on the triplet training dataset.
+3. **Testing**: Code for computing the top-3 accuracy of **MTEB/mtop_intent** dataset using a retrieval task approach based on Annoy index. In this approach, the trainset of MTEB/mtop_intent is indexed, and the testset is used as a search query.
 4. **Visualising Attention**: Code for visualising the attention mechanisms within each layer of the embedding models.
 
 ## Running the code
@@ -35,9 +35,21 @@ nohup python -u test.py --test_model_path "trained_model" --annoy_tree_num 20 >>
 tail -f logs/test_log.txt
 ```
 ## Test Results and Performance Comparison
+Despite its significantly smaller parameter size, the high-level semantic model outperforms the base model and other two open-source sentence embedding models, e5-large-v2 (Microsoft) and ember-v1 (current SOTA model for classification task on MTEB leaderboard).
+
+|Model|Hidden size|Parameters|
+|---|---|---|
+|[base model](https://huggingface.co/sentence-transformers/all-MiniLM-L12-v2)|384|33M|
+|high-level semantic model|384|33M|
+|[e5-Large-v2](https://huggingface.co/embaas/sentence-transformers-e5-large-v2)|1024|335M|
+|[ember-v1](https://huggingface.co/llmrails/ember-v1)|1024|335M|
+
 |Model|Top-1|Top-2|Top-3|
 |---|---|---|---|
-|Base|0.851|0.918|0.943|
-|high-level-semantic|**0.930**|**0.954**|**0.963**|
-|E5-Large|0.888|0.940|0.956|
-|Ember-v1|0.902|0.945|**0.963**|
+|[base model](https://huggingface.co/sentence-transformers/all-MiniLM-L12-v2)|0.851|0.918|0.943|
+|high-level semantic model|**0.930**|**0.954**|**0.963**|
+|[e5-Large-v2](https://huggingface.co/embaas/sentence-transformers-e5-large-v2)|0.888|0.940|0.956|
+|[ember-v1](https://huggingface.co/llmrails/ember-v1)|0.902|0.945|**0.963**|
+
+
+
