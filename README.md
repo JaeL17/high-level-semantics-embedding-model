@@ -1,5 +1,5 @@
 # Overview
-Welcome to the repository for our high-level semantic embedding model designed for intent classification, a crucial task in the field of Natural Language Processing (NLP). In this project, I have developed a high-level semantic embedding model, focusing on achieving a deeper understadning of sentence intentions.
+Welcome to the repository for our high-level semantic embedding model designed for intent classification, a crucial task in the field of Natural Language Processing (NLP). In this project, I have developed a high-level semantic embedding model, focusing on achieving a deeper understanding of sentence intentions.
 
 ## Motivation
 Intent classification is a task that requires a broader understanding of the underlying meaning in a sentence. However, conventional embedding models tend to  focus on specific details within a sentence, such as certain keywords. To address this limitation, I implemented a data augmentation method to construct a triplet training dataset using the entity attributes and entity relations information extracted from FewRel relation classification dataset. You can access the FewRel dataset here: https://paperswithcode.com/dataset/fewrel
