@@ -48,7 +48,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--base_model", type=str, required=True)
     parser.add_argument("--max_seq_len", type=int, default=512)
-    parser.add_argument("--train_batch_size", type=int, requred=True)
+    parser.add_argument("--train_batch_size", type=int, required=True)
     parser.add_argument("--epochs", type=int, default=4)
     parser.add_argument("--lr", default=2e-5, type=float)
     parser.add_argument("--pooling", default="mean")
