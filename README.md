@@ -7,7 +7,7 @@ In intent classification, it is essential to grasp a broader understanding of th
 ## Contents
 1. **Data Parsing**: Code for constructing the triplet training dataset.
 2. **Training**: Code for fine-tuning open-source sentence embedding models on the triplet training dataset.
-3. **Testing**: Code for computing the top-3 accuracy of **MTEB/mtop_intent** dataset using a retrieval task approach based on Annoy index. In this approach, the trainset of MTEB/mtop_intent is indexed, and the testset is used as a search query.
+3. **Testing**: Code for computing the top-3 accuracy of **MTEB/mtop_intent** dataset using a retrieval framework with Annoy index for vector search. In this approach, the trainset of MTEB/mtop_intent is indexed, and the testset is used as a search query.
 4. **Visualising Attention**: Code for visualising the attention mechanisms within each layer of the embedding models.
 
 ## Running the code
