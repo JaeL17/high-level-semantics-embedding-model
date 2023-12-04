@@ -2,10 +2,10 @@
 Welcome to the repository for a high-level semantic embedding model designed for intent classification, a crucial task in the field of Natural Language Processing (NLP). This project introduces a novel apporach to train high-level semantic sentence embedding models, with a primary focus on enhancing the understanding of the intention within sentences.
 
 ## Motivation
-In intent classification, it is essential to grasp a broader understanding of the underlying meaning in a sentence. However, conventional embedding models tend to focus on specific entity attributes within a sentence, such as certain keywords. To address this limitation, I implemented a data augmentation method to construct a triplet training dataset using the entity attributes and entity relations information extracted from FewRel relation classification dataset. You can access the FewRel dataset here: [FewRel dataset](https://paperswithcode.com/dataset/fewrel)
+In intent classification, it is essential to grasp a broader understanding of the underlying meaning in a sentence. However, conventional embedding models tend to focus on specific entity attributes within a sentence, such as certain keywords. To address this limitation, I implemented a data augmentation method to construct a triplet training dataset using the entity attributes and entity relations information extracted from FewRel relation classification dataset. My approach is inspired by the significance of emphasising the embedding of predicates, which unfold the content of a sentence, as opposed to focusing on entity attributes within a sentence. You can access the FewRel dataset here: [FewRel dataset](https://paperswithcode.com/dataset/fewrel)
 
 ## Contents
-1. **Data Parsing**: Code for constructing the triplet training dataset.
+1. **Data Parsing**: Code for implementing data augmentation method to construct the triplet training dataset.
 2. **Training**: Code for fine-tuning open-source sentence embedding models on the triplet training dataset.
 3. **Testing**: Code for computing the top-3 accuracy of **MTEB/mtop_intent** dataset using a retrieval framework with Annoy index for vector search. In this approach, the trainset of MTEB/mtop_intent is indexed, and the testset is used as a search query.
 4. **Visualising Attention**: Code for visualising the attention mechanisms within each layer of the embedding models.
